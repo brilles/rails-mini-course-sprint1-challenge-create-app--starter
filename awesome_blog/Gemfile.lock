@@ -1,3 +1,9 @@
+PATH
+  remote: ../publishable
+  specs:
+    publishable (0.1.0)
+      activerecord (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -192,6 +198,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   duktape
   jbuilder (~> 2.5)
+  publishable!
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)

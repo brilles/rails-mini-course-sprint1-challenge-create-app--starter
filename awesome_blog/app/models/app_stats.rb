@@ -1,4 +1,5 @@
 class AppStats
+    include WordCounter
     attr_reader :posts, :quotes
     def initialize(posts, quotes)
         @posts = posts
@@ -16,7 +17,7 @@ class AppStats
     def posts_word_count
         total_word_count = 0
         for post in @posts
-            total_word_count += post.word_count
+            total_word_count += word_count(post.body)
         end
         total_word_count
     end
@@ -24,7 +25,7 @@ class AppStats
     def quotes_word_count
         total_word_count = 0
         for quote in @quotes
-            total_word_count += quote.word_count
+            total_word_count += word_count(quote.body)
         end
         total_word_count
     end
